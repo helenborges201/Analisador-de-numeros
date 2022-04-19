@@ -27,7 +27,11 @@ function AdicionarNumero() {
 
 
 //mostrando resultado 
-function Finalizar() {  
+function Finalizar() {
+//Forçando a adicionar um número antes de finalizar
+    if (listaNumeros == 0) {
+        alert('Adicione um número')
+    } else {
         resultado.innerHTML =`<p>Ao todo temos, ${listaNumeros.length} números cadastrado.</p>`
         
         var maiorValor = Math.max.apply(null, listaNumeros)
@@ -46,5 +50,5 @@ function Finalizar() {
 
         let media = soma / listaNumeros.length
         resultado.innerHTML += `<p>A media dos valores digitados é ${media}.</p>`
-    
+    }
 } 
